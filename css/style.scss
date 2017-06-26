@@ -1,0 +1,32 @@
+body {
+
+}
+
+#screen {
+  width: 900px;
+  height: 700px;
+}
+
+#score {
+  height: 100px;
+}
+
+#game {
+height: 500px;
+width: 900px;
+position: absolute;
+}
+
+#player {
+  //background-image: url("../img/player-img.png");
+  background-repeat: no-repeat;
+  position:absolute;
+  height: 200px;
+  width: 2px;
+  transform: translate(600px, 190px);
+}
+
+#surfer {
+  width: 160px;
+  height: 160px;
+}
