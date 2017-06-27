@@ -1,10 +1,12 @@
 $(document).ready(function() {
   var keyboard = new Keyboard();
+  var wave = new Wave();
+  wave.tie();
 
   $(document).on('keydown', function(e) {
     console.log("escucho tecla");
     if (keyboard.isKeyUp(e)) {
-      playerPositionY -= DELTA_TIME;
+      playerPositionY -= DELTA_TIME*300;
       playerView.css({
         transform: "translate(" +
           playerPositionX + "px, " +
@@ -12,7 +14,7 @@ $(document).ready(function() {
       });
     }
     if (keyboard.isKeyDown(e)) {
-      playerPositionY += DELTA_TIME;
+      playerPositionY += DELTA_TIME*300;
       playerView.css({
         transform: "translate(" +
           playerPositionX + "px, " +
@@ -20,7 +22,7 @@ $(document).ready(function() {
       });
     }
     if (keyboard.isKeyLeft(e)) {
-      playerPositionX -= DELTA_TIME;
+      playerPositionX -= DELTA_TIME*300;
       playerView.css({
         transform: "translate(" +
           playerPositionX + "px, " +
@@ -28,7 +30,7 @@ $(document).ready(function() {
       });
     }
     if (keyboard.isKeyRight(e)) {
-      playerPositionX += DELTA_TIME;
+      playerPositionX += DELTA_TIME*300;
       playerView.css({
         transform: "translate(" +
           playerPositionX + "px, " +
