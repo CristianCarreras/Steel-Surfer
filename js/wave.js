@@ -8,7 +8,6 @@ Wave.prototype.tie = function(){
   var waveMovement = RESET_COUNTER; // Initial position of the waves movement
   function moveWave() {
     waveMovement += WAVE_SPEED * DELTA_TIME;
-    console.log(waveMovement);
     var waveMovement2 = waveMovement - WAVE_LENGTH;
     var position1 = waveMovement + "px";
     var position2 = waveMovement2 + "px";
