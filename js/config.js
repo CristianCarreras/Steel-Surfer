@@ -6,7 +6,7 @@
 var PLAYER_HEALTH = 100;
 
 var FPS = 60;
-var DELTA_TIME = FPS / 1000;
+var DELTA_TIME = 1000 / FPS;
 
 // ------ Positions Control -
 var playerPositionY = $("#player").position().top;

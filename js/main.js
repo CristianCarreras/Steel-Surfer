@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   $(document).on('keydown', function(e) {
     if (keyboard.isKeyUp(e)) {
-      playerPositionY -= (DELTA_TIME * FPS);
+      playerPositionY -= DELTA_TIME;
       playerView.css({
         transform: "translate(" +
           playerPositionX + "px, " +
@@ -11,7 +11,7 @@ $(document).ready(function() {
       });
     }
     if (keyboard.isKeyDown(e)) {
-      playerPositionY += (DELTA_TIME * FPS);
+      playerPositionY += DELTA_TIME;
       playerView.css({
         transform: "translate(" +
           playerPositionX + "px, " +
@@ -19,7 +19,7 @@ $(document).ready(function() {
       });
     }
     if (keyboard.isKeyLeft(e)) {
-      playerPositionX -= (DELTA_TIME * FPS);
+      playerPositionX -= DELTA_TIME;
       playerView.css({
         transform: "translate(" +
           playerPositionX + "px, " +
@@ -27,7 +27,7 @@ $(document).ready(function() {
       });
     }
     if (keyboard.isKeyRight(e)) {
-      playerPositionX += (DELTA_TIME * FPS);
+      playerPositionX += DELTA_TIME;
       playerView.css({
         transform: "translate(" +
           playerPositionX + "px, " +
