@@ -9,7 +9,7 @@ var PLAYER_SPEED  = 5;
 var WAVE_SPEED    = 20; //MS for repeat interval ++ms = --speed
 var WAVE_LENGTH   = 2000; //px for the wave pic
 
-var FPS           = 30;
+var FPS           = 60;
 var DELTA_TIME    = FPS / 1000;
 
 var RESET_COUNTER = 0;
