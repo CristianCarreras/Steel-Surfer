@@ -2,6 +2,7 @@ $(document).ready(function() {
   var keyboard = new Keyboard();
 
   $(document).on('keydown', function(e) {
+    console.log("escucho tecla");
     if (keyboard.isKeyUp(e)) {
       playerPositionY -= DELTA_TIME;
       playerView.css({
