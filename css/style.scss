@@ -33,13 +33,23 @@ body {}
   height: 121px;
 }
 
-.obstacle {
-  width: 100px;
+// .obstacle {
+//   width: 100px;
+//   height: 100px;
+//   background-color: white;
+//   position: absolute;
+//   z-index: 40;
+//   transform: translate(400px, 190px);
+// }
+
+.enemy {
+  background-image: url("../img/shark.gif");
+  background-size: cover;
   height: 100px;
-  background-color: white;
+  width: 170px;
+  left: 0px;
   position: absolute;
-  z-index: 40;
-  transform: translate(400px, 190px);
+  z-index: 130;
 }
 
 #wave1 {
