@@ -2,10 +2,7 @@ $(document).ready(function() {
   var keyboard = new Keyboard();
   var wave     = new Wave();
   var enemy    = new Enemy();
-  console.log(enemy.enemyPositionY);
   wave.tie();
-
-
 
   $(document).on('keydown', function(e) {
     if (keyboard.isKeyUp(e)) {
