@@ -4,6 +4,12 @@ $(document).ready(function() {
   var enemy    = new Enemy();
   wave.tie();
 
+  function checkObstacles() {
+    if ($("#surfer").collision(".obstacle").length >  0) {
+      console.log('me la he pegao!');
+    }
+  }
+
   $(document).on('keydown', function(e) {
     if (keyboard.isKeyUp(e)) {
       playerPositionY -= DELTA_TIME*300;
@@ -42,9 +48,4 @@ $(document).ready(function() {
       });
     }
   });
-  function checkObstacles() {
-    if ($("#player").collision(".obstacle").length >  0) {
-      console.log('me la he pegao!');
-    }
-  }
 });
