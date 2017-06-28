@@ -29,3 +29,5 @@ var gameView   = $("#game");
 var playerView = $("#player");
 var wave1View  = $("#wave1");
 var wave2View  = $("#wave2");
+
+// ------ Collisions -
