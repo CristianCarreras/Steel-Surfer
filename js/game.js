@@ -23,7 +23,7 @@ function Game(){
     var that = this;
     setInterval(function() {
       that.createEnemy();
-    }, 3 * 1000);
+    }, 2 * 1000);
 }
 
 Game.prototype.checkCollision = function(player, enemy){
@@ -36,7 +36,7 @@ Game.prototype.checkCollision = function(player, enemy){
 
 Game.prototype.createEnemy = function() {
   var that = this;
-  var pxSec = Math.random() * 150 + 40;
+  var pxSec = Math.random() * 250 + 100;
   var enemy = new Enemy(pxSec/ this.fps);
   this.enemies.push(enemy);
 };
@@ -47,10 +47,11 @@ Game.prototype.move = function() {
   this.enemies.forEach(function(enemy){
     if(that.checkCollision(that.player,enemy)){
       // TODO: Play a sound
-      that.score += 10;
+      // that.score += 10;
       enemy.delete();
     } else if(enemy.x > gameView.width()){
       enemy.delete();
+      that.score += 10;
     } else {
       enemy.move();
     }
