@@ -5,7 +5,7 @@ function Game(){
     this.fps = 30;
 
     // create the player for this game
-    this.player = new Player(200/this.fps);
+    this.player = new Player(PLAYER_SPEED/this.fps);
 
     // TODO: Print the score value in the screen
     // Score for the player
@@ -23,7 +23,7 @@ function Game(){
     var that = this;
     setInterval(function() {
       that.createEnemy();
-    }, 2 * 1000);
+    }, 3 * 1000);
 }
 
 Game.prototype.checkCollision = function(player, enemy){
@@ -36,7 +36,7 @@ Game.prototype.checkCollision = function(player, enemy){
 
 Game.prototype.createEnemy = function() {
   var that = this;
-  var pxSec = Math.random() * 100 + 50;
+  var pxSec = Math.random() * 150 + 40;
   var enemy = new Enemy(pxSec/ this.fps);
   this.enemies.push(enemy);
 };

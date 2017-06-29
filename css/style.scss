@@ -44,8 +44,43 @@ body {}
 .enemy {
   background-image: url("../img/shark.gif");
   background-size: cover;
-  height: 100px;
-  width: 170px;
+  height: 50px;
+  width: 120px;
+  position: absolute;
+  z-index: 1;
+}
+
+.shark {
+  background-image: url("../img/shark.gif");
+  background-size: cover;
+  height: 50px;
+  width: 120px;
+  position: absolute;
+  z-index: 1;
+}
+
+.otherSurfer {
+  background-image: url("../img/otherSurfer.gif");
+  background-size: cover;
+  height: 115px;
+  position: absolute;
+  z-index: 1;
+}
+
+.reef {
+  background-image: url("../img/reef.png");
+  background-size: cover;
+  height: 50px;
+  width: 120px;
+  position: absolute;
+  z-index: 1;
+}
+
+.beachBoy {
+  background-image: url("../img/shark.gif");
+  background-size: cover;
+  height: 50px;
+  width: 120px;
   position: absolute;
   z-index: 1;
 }
