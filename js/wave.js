@@ -1,8 +1,14 @@
 var Wave = function() {
 
-};
+  var wave1View  = $("#wave1");
+  var wave2View  = $("#wave2");
 
-Wave.prototype.tie = function(){
+  var wave1PositionY   = $("#wave1").position().top;
+  var wave2PositionY   = $("#wave2").position().left;
+  var wave1PositionX   = $("#wave1").position().top;
+  var wave2PositionX   = $("#wave2").position().left;
+
+
   var movingWaves = setInterval(moveWave, WAVE_SPEED * DELTA_TIME);
   var concatingWaves = setInterval(repeatWaves, (WAVE_LENGTH / (WAVE_SPEED * DELTA_TIME) * (WAVE_SPEED * DELTA_TIME))*3.34);
   var waveMovement = RESET_COUNTER; // Initial position of the waves movement
