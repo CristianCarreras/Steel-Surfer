@@ -1,7 +1,7 @@
 var Enemy = function(speed) {
   this.speed = speed;
   this.x =  -180;
-  this.y = Math.random() * (gameView.height() / 2) + (gameView.height() / 3) - 125;
+  this.y = Math.random() * (gameView.height() / 2) + (gameView.height() / 3) - 150;
   this.renderEnemy();
 };
 

@@ -7,7 +7,6 @@ function Game(){
     // create the player for this game
     this.player = new Player(PLAYER_SPEED/this.fps);
 
-    // TODO: Print the score value in the screen
     // Score for the player
     this.score = 0;
 
@@ -15,6 +14,8 @@ function Game(){
     $(document).on('keydown', this.player.keyboardEventDown.bind(this.player));
     $(document).on('keyup', this.player.keyboardEventUp.bind(this.player));
 
+    //Load sounds
+    // var sharkSound = new Audio ("./sounds/france-tour.mp3");
 
     // start with an empty array of enemies
     this.enemies = [];
@@ -33,6 +34,9 @@ Game.prototype.checkCollision = function(player, enemy){
   return false;
 };
 
+Game.prototype.printScore = function() {
+  scoreView.html(this.score);
+};
 
 Game.prototype.createEnemy = function() {
   var that = this;
@@ -47,11 +51,12 @@ Game.prototype.move = function() {
   this.enemies.forEach(function(enemy){
     if(that.checkCollision(that.player,enemy)){
       // TODO: Play a sound
-      // that.score += 10;
+      that.score += 10;
       enemy.delete();
+      // sharkSound.play();
     } else if(enemy.x > gameView.width()){
       enemy.delete();
-      that.score += 10;
+      // that.score += 10;
     } else {
       enemy.move();
     }
@@ -59,4 +64,6 @@ Game.prototype.move = function() {
 
   // move the player
   this.player.move();
+  // print the score
+  this.printScore();
 };

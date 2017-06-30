@@ -6,7 +6,7 @@
 var PLAYER_HEALTH = 100;
 var PLAYER_SPEED  = 200;
 
-var WAVE_SPEED    = 10; //MS for repeat interval ++ms = --speed
+var WAVE_SPEED    = 20; //MS for repeat interval ++ms = --speed
 var WAVE_LENGTH   = 2000; //px for the wave pic
 
 var FPS           = 30;
@@ -20,6 +20,7 @@ var RESET_COUNTER = 0;
 var screenView = $("#screen");
 var scoreView  = $("score");
 var gameView   = $("#game");
+var scoreView  = $("#scoreJS");
 
 
 // ------ Collisions -
