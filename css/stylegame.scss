@@ -2,6 +2,11 @@
 
 body {
   overflow: hidden;
+  background-image: url("../img/wave-header2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
 };
 
 #screen {
@@ -19,6 +24,7 @@ body {
   font-size: 4em;
   font-family: 'Megrim', cursive;
   font-weight: bold;
+  color: white;
 }
 
 #game {
@@ -30,7 +36,7 @@ body {
 }
 
 .wave {
-  height: 90vh;
+  height: auto;
 }
 
 .player {
@@ -114,12 +120,12 @@ body {
   height: 1200px;
   position: absolute;
   z-index: 1;
-  left: 2000px;
+  left: 0px;
 }
 
 .btn {
-  margin-left: 500px;
-  margin-top: 30px;
+  margin-left: 300px;
+  margin-top: 20px;
   display: inline-block;
   background: #5e5e5e;
   background-image: -webkit-linear-gradient(top, #5e5e5e, #8a8a8a);

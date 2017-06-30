@@ -21,6 +21,7 @@ var screenView = $("#screen");
 var scoreView  = $("score");
 var gameView   = $("#game");
 var scoreView  = $("#scoreJS");
+var timeView   = $("#timeDown");
 
 
 // ------ Collisions -

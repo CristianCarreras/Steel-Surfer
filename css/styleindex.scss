@@ -6,6 +6,14 @@ body {
   background-size: cover;
 }
 
+#yellow {
+  color: gold;
+}
+
+#red {
+  color: darkred;
+}
+
 h1 {
   font-size: 5em;
   color: #5e5e5e;
@@ -15,6 +23,10 @@ h1 {
   text-align: center;
   align-items: center;
   text-shadow: -2px -2px 1px #fff, 2px 2px 1px #000, -2px 2px 1px #fff, 2px -2px 1px #000;
+}
+
+img {
+  width: 300px;
 }
 
 .btn {
@@ -43,7 +55,7 @@ h1 {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 40px;
+  // margin-top: 40px;
 }
 
 .btn:hover {

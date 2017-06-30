@@ -9,12 +9,11 @@ function Game(){
 
     // Score for the player
     this.score = 0;
+    this.timeRest = 30;
 
     // configure the player events
     $(document).on('keydown', this.player.keyboardEventDown.bind(this.player));
     $(document).on('keyup', this.player.keyboardEventUp.bind(this.player));
-
-    //Load sounds
 
     // start with an empty array of enemies
     this.enemies = [];
@@ -24,13 +23,37 @@ function Game(){
     setInterval(function() {
       that.createEnemy();
     }, 2 * 1000);
+    //Restar contador
+    setInterval(function() {
+      that.restTime();
+    }, 1 * 1000);
 }
+
+//Print rest time
+Game.prototype.restTime = function() {
+  timeView.html(this.timeRest);
+  this.timeRest--;
+};
 
 Game.prototype.checkCollision = function(player, enemy){
   if (player.player.collision(enemy.enemy).length >  0) {
     return true;
   }
   return false;
+};
+
+Game.prototype.checkScore = function() {
+  if (this.score >= 200) {
+    console.log("WIN WIN WIN");
+    location.href ="win.html";
+  }
+};
+
+Game.prototype.checkTime = function() {
+  if (this.timeRest <= 0) {
+    console.log("LOOSE LOOSE LOOSE");
+    location.href ="looser.html";
+  }
 };
 
 Game.prototype.printScore = function() {
@@ -49,12 +72,10 @@ Game.prototype.move = function() {
   var that = this;
   this.enemies.forEach(function(enemy){
     if(that.checkCollision(that.player,enemy)){
-      // TODO: Play a sound
       that.score += 10;
       enemy.delete();
     } else if(enemy.x > gameView.width()){
       enemy.delete();
-      // that.score += 10;
     } else {
       enemy.move();
     }
@@ -64,4 +85,6 @@ Game.prototype.move = function() {
   this.player.move();
   // print the score
   this.printScore();
+  this.checkScore();
+  this.checkTime();
 };
