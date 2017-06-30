@@ -15,7 +15,6 @@ function Game(){
     $(document).on('keyup', this.player.keyboardEventUp.bind(this.player));
 
     //Load sounds
-    // var sharkSound = new Audio ("./sounds/france-tour.mp3");
 
     // start with an empty array of enemies
     this.enemies = [];
@@ -53,7 +52,6 @@ Game.prototype.move = function() {
       // TODO: Play a sound
       that.score += 10;
       enemy.delete();
-      // sharkSound.play();
     } else if(enemy.x > gameView.width()){
       enemy.delete();
       // that.score += 10;
